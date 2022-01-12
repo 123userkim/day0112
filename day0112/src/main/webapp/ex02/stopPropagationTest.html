@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+p,a{
+	margin: 10px;
+	padding: 5px;
+	border: solid black 3px;
+}
+
+</style>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		//---------기본이벤트 제거--------
+		$("a").click(function(event){
+			$(this).css("background","blue")
+			//a는 기본적으로 연결해주는 역할->기본 이벤트를 제거함으로 클릭시, 배경색만 바꿔줌
+			//event.preventDefault();
+			//자식의 이벤트가 발생했을 때, 부모노드의 것을 제거해줌(자신이 맡은 일만함)
+			///event.stopPropagation();
+			
+			//위의 두개를 동시에 사용한 
+			return false;
+		})
+		
+		$("p").click(function(){
+			$(this).css("background","red")
+			
+		})
+	})
+</script>
+</head>
+<body>
+	<p>
+		Hello<br>
+		<a href ="http://www.hanb.co.kr">한빛미디어</a>
+	</p>
+</body>
+</html>

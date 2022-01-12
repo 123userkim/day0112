@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+*{
+	margin: 5px;
+	padding: 5px;
+	border: solid black 3px;
+}
+
+</style>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		//---------기본이벤트 제거--------
+		$("a").click(function(event){
+			$(this).css("background","blue")
+			//a는 기본적으로 연결해주는 역할->기본 이벤트를 제거함으로 클릭시, 배경색만 바꿔줌
+			event.preventDefault();
+		})
+	})
+</script>
+</head>
+<body>
+	<a href ="http://www.hanb.co.kr">한빛미디어</a>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		
+		
+		$("h1").click(function(){ 
+			
+		/*//-----------------toggle-----------------
+			$(this).next().toggle(2000,function(){
+				alert("작업끝")
+			}); 
+		
+		
+		//-----------------slideToggle-----------------
+			$(this).next().slideToggle(2000,function(){
+				alert("작업끝")
+			}); 
+			
+			
+		 */ 
+		//-----------------fadeToggle-----------------
+			$(this).next().fadeToggle(2000,function(){
+				alert("작업끝")
+			}); 
+		}) 
+	
+	
+	})
+</script>
+</head>
+<body>
+
+	<h1>OPEN & CLOSE</h1>
+	<div>
+		<h1>광주시, 현대산업개발 모든 건축·건설현장 공사중지 명령</h1>
+		<p>(광주=연합뉴스) 장아름 기자 = 광주시가 지난 11일 붕괴 사고가 발생한 광주화정아이파크 신축 공사 현장을 포함해 현대산업개발의 모든 건축·건설현장에 공사중지 명령을 내렸다.</p>
+	</div>
+	
+	<h1>OPEN & CLOSE</h1>
+	<div>
+		<h1>김정은 661일만에 미사일 발사 참관…'최측근' 김여정도 동행(종합)</h1>
+		<p>(서울=연합뉴스) 배영경 기자 = 김정은 북한 국무위원장이 2년 만에 미사일 시험발사 현장을 직접 참관해 눈길을 끈다.</p>
+	</div>
+	
+</body>
+</html>

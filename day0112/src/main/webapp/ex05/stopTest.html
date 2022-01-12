@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+		div{
+			width: 100px;
+			height: 100px;
+			background: orange;
+			position: relative;
+			margin: 10px;
+		}
+</style>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		 $("div").animate({left:500},3000)
+		 $("div").animate({left:0},3000)
+		 
+		 $("button").click(function(){
+			let html = $(this).html();
+			'$("div").'+html;
+//			'$("div").stop(true)'
+
+			let evalText = 	'$("div").'+html;
+			eval(evalText)
+		 })
+  	})
+</script>
+</head>
+<body>
+	<!--  현 진행되고 있는 효과는 정지되고 , 남은 효과들이 실행됨. -->
+	<button>stop()</button>
+	<!-- 현 진행되고 있는 효과가 정지되고 모든 효과들이 정지 -->
+	<button>stop(true)</button>
+	<!--현 진행되고 있는 효과는 정지되고, 현재 효과의 끝으로 이동한 후  남은 효과들이 실행됨-->
+	<button>stop(false,true)</button>
+	<!-- 현 진행되고 있는 효과는 정지되고, 현재 효과의 끝으로 이동한 후 나머지 효과도 지워짐. -->
+	<button>stop(true, true)</button>
+	<div ></div> 
+</body>
+</html>
